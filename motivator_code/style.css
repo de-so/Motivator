@@ -2,81 +2,162 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
+    font-family: cursive;
+}
+a{
+    text-decoration: none !important;
+
 }
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    100% {
         opacity: 1;
     }
 }
 
 body{
-    background-color: rgb(216, 54, 54);
+    background-color: rgb(42, 0, 0);
 }
 .wrapper {
-    width: 400px;
-    position: absolute;
-    transform: translate(50%,50%);
-    bottom: 50%;
-    right: 50%;
-    /* animation: fadeIn 2s ease-in; */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 .container {
-    width: 100%;
-    background-color: rgb(216, 54, 54);
-    padding: 50px 40px;
-    box-shadow: 0px 20px 65px rgb(111, 35, 35);
-    position: relative;
+    display: block;
+    position: absolute;
+    width: 22em;
+    height: 20em;
+    background-color: rgb(255, 45, 45);    
+    background: radial-gradient(white 1%,red 75%);
+    padding: 4em 1em;
+    box-shadow: 0px 0px 100px rgb(255, 152, 152);
     border-radius: 8px;
     text-align: center;
 }
 .container::after {
     content: "";
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 80%;
     height: 120%;
-    background-color: white;
-    top: -10%;
-    left: 10%;
-    z-index: -1;
+    background: radial-gradient(rgb(255, 36, 36) 92%,white 99%);
+    border-radius: 2em;
+    z-index: -5;
 }
+.container::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
 
-/* #content {
-     animation: fadeIn 2s ease-in; 
-} */
-
+}
+#content{
+    z-index: -3;
+    
+}
 #content p {
-    color: white;
+    color: black;
     line-height: 1.5;
     font-size: 18px;
 }
 #content h3 {
-    color: white;
+    color: black;
     font-size: 18px;
     margin: 20px 0px 30px 0px;
     font-weight: 600;
     text-transform: capitalize;
 }
-.container button {
+#author{
+    padding: 2.5em 0em 0.5em 0;
+}
+#author>span{    
     background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
+}
+#btn {
+    padding: 1em 2em;
+    border-radius: 1em;
     border: none;
-    padding: 15px 45px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(216, 54, 54);
     cursor: pointer;
     transition: 0.2s;
 }
-.container button:hover {
-    transform: scale(102%);
-    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+.btn-design{
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
 }
-.container button:active {
-    transform: scale(98%);
-    box-shadow: 0px 0px 12px rgb(255, 255, 255);
-    transition: 0.3s;
+#btn:hover{
+    background-color: rgb(84, 22, 22);
+    color: rgb(255, 255, 255);
+}
+#btn:active{
+    background-color: rgb(31, 14, 14);
+    color: white;
+    box-shadow: 0px 0px 20px white;
+}
+.footer{
+    position: absolute;
+    bottom: 2vh;
+    text-align: center;
+    border: 2px dotted white;
+    padding: 0 3em;
+    z-index: 100;
+}
+.copyright{
+    color: white;
+    text-transform: lowercase;
+    font-size: x-small;
+    padding: 0 2em 1.5em 2em;
+}
+
+#listItem {
+    padding: 1em;
+    display: flex;
+    row-gap: 1em;
+    flex-direction: column;
+    list-style: none;
+}
+#listItem>li a, .about{
+    display: block;
+    background: rgb(255, 255, 255);
+    border-radius: 10em;
+    padding: 10px 20px;
+    margin: 15px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(216, 54, 54);
+    transition: 0.1s;
+    cursor: pointer;
+}
+.about{
+    color: white !important;
+    background-color: rgb(87, 0, 0) !important;
+    margin: 20px 80px !important;
+    font-size: small;
+    padding: 5px 15px !important;
+    border-radius: 5px !important;
+}
+
+#listItem>li a:hover, .about:hover{
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+#listItem>li a:active, .about:active{
+    background: rgb(226, 226, 226);
+    transform: scale(96%);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.about>a:hover{
+    text-decoration: none;
+
 }

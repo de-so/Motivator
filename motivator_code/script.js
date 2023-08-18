@@ -36,6 +36,7 @@ let getQuote = function(){
                         author.innerText = "- " + data[random].author;    
                         // setCookie("usedToday","yes",1);
                         btnq.style.setProperty("pointer-events","none");
+                        btnq.style.setProperty("background-color","rgb(255, 255, 255)");
                         btn.innerText="Visit Tomorrow";
                     })
                 }
