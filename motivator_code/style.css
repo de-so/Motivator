@@ -126,7 +126,6 @@ body{
     row-gap: 1em;
     flex-direction: column;
     list-style: none;
-    color: rgb(0, 0, 0)!important;
 }
 #listItem>li a, .about{
     display: block;
