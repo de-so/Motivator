@@ -1,4 +1,4 @@
-# Motivator
+# [Motivator](https://yourmotivator.netlify.app/)
  ### Description.
  A tool to get motivational quotes from history, spoken by great personalities for free.  
    
